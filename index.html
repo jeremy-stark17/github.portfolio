@@ -2,91 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jeremiah Pothula - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeremiah Pothula - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script type="module" src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
-
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
       <a href="#" class="logo">Jeremiah Pothula</a>
-      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggle-btn>
-        <span class="menu-icon">☰</span>
-        <span class="close-icon">✕</span>
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
+        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" class="close-icon"></ion-icon>
       </button>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="#about" class="navbar-link" data-nav-link>About</a></li>
+          <li><a href="#portfolio" class="navbar-link" data-nav-link>Projects</a></li>
+          <li><a href="#skills" class="navbar-link" data-nav-link>Skills</a></li>
+          <li><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
+          <li><a href="https://github.com/jeremy-stark/17github.portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-primary blue">GitHub Repo</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li><a href="#about" class="navbar-link" data-nav-link>About</a></li>
-        <li><a href="#skills" class="navbar-link" data-nav-link>Skills</a></li>
-        <li><a href="#portfolio" class="navbar-link" data-nav-link>Projects</a></li>
-        <li><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
-    <section class="hero section" id="about">
-      <div class="container hero-content">
-        <h1 class="hero-title">Jeremiah <strong>Pothula</strong></h1>
-        <p class="hero-text">
-          Software Engineer | Java, Python, Cloud | MS in IT (Gold Medalist)
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <h1 class="hero-title">
+        Jeremiah <strong>Pothula</strong>
+      </h1>
+      <p class="hero-text">
+        Master of Science in Information Technology - Gold Medalist<br />
+        Full Stack Developer | Cloud Enthusiast | Software Engineer
+      </p>
+      <div class="btn-group">
+        <a href="#portfolio" class="btn btn-primary blue">View Projects</a>
+        <a href="mailto:jeremiahpothula37@gmail.com" class="btn btn-primary blue">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-banner">
+      <img src="images/profile.jpg" alt="Jeremiah Pothula" />
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-banner">
+        <img src="images/profile-2.jpg" alt="Jeremiah Pothula" class="img-cover" />
+      </div>
+      <div>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-text">
+          I am Jeremiah Pothula, a passionate Software Engineer with expertise in Java, Python, JavaScript, and cloud technologies.
+          I hold a Master's degree in Information Technology from Arizona State University with a perfect 4.0 GPA.
+          I specialize in backend and full-stack development, leveraging cloud platforms like AWS, GCP, and Azure to build scalable applications.
         </p>
-        <p>Email: jeremiahpothula37@gmail.com | Phone: (623) 273-5970</p>
-        <p>Tempe, Arizona</p>
+        <p class="section-text">
+          With experience leading agile teams and delivering automation projects, I focus on writing clean, maintainable code that drives business impact.
+        </p>
+        <p class="section-text">
+          I am actively seeking exciting roles where I can contribute, learn, and grow.
+        </p>
+        <ul>
+          <li>Email: jeremiahpothula37@gmail.com</li>
+          <li>Phone: (623) 273-5970</li>
+          <li>Location: Tempe, Arizona</li>
+          <li><a href="https://www.linkedin.com/in/jeremiahpothula/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/jeremy-stark" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="skills section" id="skills">
-      <h2 class="section-title">Technical Skills</h2>
-      <ul class="skills-list container">
-        <li class="skills-item">
-          <div class="skills-title">Languages</div>
-          <div class="skills-data">Java, Python, JavaScript, SQL, Dart</div>
-        </li>
-        <li class="skills-item">
-          <div class="skills-title">Cloud Platforms</div>
-          <div class="skills-data">AWS, GCP, Azure</div>
-        </li>
-        <li class="skills-item">
-          <div class="skills-title">Frameworks & Tools</div>
-          <div class="skills-data">Spring Boot, React.js, Flutter, Django, Node.js, Docker, Jenkins</div>
-        </li>
-      </ul>
-    </section>
-
-    <section class="portfolio section" id="portfolio">
-      <h2 class="section-title">Projects</h2>
-      <ul class="portfolio-list container">
-        <li class="portfolio-card">
+  <!-- PORTFOLIO -->
+  <section class="portfolio section" id="portfolio">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-text">Here are some projects I have worked on recently:</p>
+    <ul class="portfolio-list">
+      <li class="portfolio-card" style="background-image: url('images/project-healthcare.jpg')">
+        <div class="card-content">
           <h3 class="card-title">Smart Healthcare Appointment and EHR System</h3>
-          <p>Full-stack Java, Spring Boot, MongoDB with secure patient-doctor scheduling and real-time EHR access.</p>
-        </li>
-        <li class="portfolio-card">
+          <p class="card-subtitle">Aug 2022 – Dec 2022</p>
+          <p>
+            Full-stack healthcare platform using Java, Spring Boot, MongoDB for secure patient-doctor scheduling and real-time EHR access.
+            Boosted patient engagement by 35%.
+          </p>
+          <a href="#" class="btn-link">View Details <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </div>
+      </li>
+      <li class="portfolio-card" style="background-image: url('images/project-video-transcription.jpg')">
+        <div class="card-content">
           <h3 class="card-title">Video Transcription as a Service</h3>
-          <p>Built with AWS Transcribe, Java, Spring Boot, and React.js for scalable, reliable transcription service.</p>
-        </li>
-        <li class="portfolio-card">
-          <h3 class="card-title">Flutter Shopping App with Secure Authentication</h3>
-          <p>Implemented hashing and salting for user authentication using Dart and Flutter.</p>
-        </li>
-      </ul>
-    </section>
+          <p class="card-subtitle">Jan 2022 – Apr 2022</p>
+          <p>
+            Built a full-stack video transcription service using AWS Transcribe, Java, MongoDB, and React.js.
+            Achieved 99.9% reliability and fast transcript delivery.
+          </p>
+          <a href="#" class="btn-link">View Details <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </div>
+      </li>
+      <li class="portfolio-card" style="background-image: url('images/project-shopping-app.jpg')">
+        <div class="card-content">
+          <h3 class="card-title">Shopping App with Hash & Salt Function</h3>
+          <p class="card-subtitle">Aug 2021 – Dec 2021</p>
+          <p>
+            Implemented cryptographic algorithms for user authentication and password security in a Flutter shopping app.
+            Achieved 100% verification accuracy.
+          </p>
+          <a href="#" class="btn-link">View Details <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-    <section class="contact section" id="contact">
-      <h2 class="section-title">Contact</h2>
-      <div class="container contact-card">
-        <p>Email: <a href="mailto:jeremiahpothula37@gmail.com">jeremiahpothula37@gmail.com</a></p>
-        <p>Phone: (623) 273-5970</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jeremiah-pothula" target="_blank">linkedin.com/in/jeremiah-pothula</a></p>
-        <p>GitHub: <a href="https://github.com/jeremiahpothula" target="_blank">github.com/jeremiahpothula</a></p>
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-text">
+      Experienced in a wide range of technologies and tools:
+    </p>
+    <ul class="skills-list">
+      <li class="skills-item">
+        <div class="wrapper">
+          <span class="skills-title">Programming Languages</span>
+          <span class="skills-data">Java, Python, JavaScript, Dart, SQL</span>
+        </div>
+      </li>
+      <li class="skills-item">
+        <div class="wrapper">
+          <span class="skills-title">Cloud Platforms</span>
+          <span class="skills-data">AWS, GCP, Microsoft Azure</span>
+        </div>
+      </li>
+      <li class="skills-item">
+        <div class="wrapper">
+          <span class="skills-title">Frameworks & Tools</span>
+          <span class="skills-data">Spring Boot, React.js, Angular, Flutter, Django, Node.js, Apache Ni-Fi</span>
+        </div>
+      </li>
+      <li class="skills-item">
+        <div class="wrapper">
+          <span class="skills-title">Databases & DevOps</span>
+          <span class="skills-data">MySQL, MongoDB, PostgreSQL, Jenkins, Docker, Kubernetes, Git</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-card">
+      <h3 class="card-subtitle">Contact Info</h3>
+      <div class="contact-item">
+        <ion-icon name="mail-outline" class="contact-icon"></ion-icon>
+        <a href="mailto:jeremiahpothula37@gmail.com" class="contact-item-link">jeremiahpothula37@gmail.com</a>
       </div>
-    </section>
-  </main>
+      <div class="contact-item">
+        <ion-icon name="call-outline" class="contact-icon"></ion-icon>
+        <a href="tel:+16232735970" class="contact-item-link">(623) 273-5970</a>
+      </div>
+      <div class="contact-item">
+        <ion-icon name="location-outline" class="contact-icon"></ion-icon>
+        <address class="contact-item-link">Tempe, Arizona</address>
+      </div>
+      <div class="contact-item">
+        <ion-icon name="logo-linkedin" class="contact-icon"></ion-icon>
+        <a href="https://www.linkedin.com/in/jeremiahpothula/" target="_blank" rel="noopener noreferrer" class="contact-item-link">LinkedIn</a>
+      </div>
+      <div class="contact-item">
+        <ion-icon name="logo-github" class="contact-icon"></ion-icon>
+        <a href="https://github.com/jeremy-stark" target="_blank" rel="noopener noreferrer" class="contact-item-link">GitHub</a>
+      </div>
+    </div>
+  </section>
 
-  <button class="back-to-top" aria-label="Back to top" data-back-to-top>↑</button>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">
+        &copy; 2025 Jeremiah Pothula. All rights reserved.
+      </p>
+      <ul class="footer-list">
+        <li><a href="#about" class="footer-link">About</a></li>
+        <li><a href="#portfolio" class="footer-link">Projects</a></li>
+        <li><a href="#skills" class="footer-link">Skills</a></li>
+        <li><a href="#contact" class="footer-link">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
 
-  <script src="script.js" defer></script>
+  <a href="#hero" class="back-to-top" data-back-to-top aria-label="Back to top">
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+
