@@ -18,8 +18,8 @@ const navbarLinks = document.querySelectorAll("[data-nav-link]");
 
 for (let i = 0; i < navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", function () {
-    header.classList.remove("nav-active");
-    navToggleBtn.classList.remove("active");
+    header.classList.toggle("nav-active");
+    navToggleBtn.classList.toggle("active");
   });
 }
 
@@ -37,3 +37,4 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
